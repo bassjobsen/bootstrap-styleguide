@@ -1,0 +1,31 @@
+@import "../bower_components/bootstrap/scss/bootstrap.scss";
+@import "variables";
+@import "utils/fixedsticky";
+
+body, 
+.container-fluid > footer, 
+.main-content {
+ background-color: $page-background-color;
+}
+.main-content {
+  padding-bottom: $font-size-base * $line-height;
+  @include media-breakpoint-down(sm) { 
+    padding-bottom: $font-size-base * $line-height * 2;
+  }
+}
+
+@include media-breakpoint-up(md) { 
+  .sidebar {
+    padding-top: 10px;
+    height: 600px;    
+  }  
+
+  .main-content {
+      border-left: 10px double $brand-primary;
+   }
+}
+@include media-breakpoint-down(sm) { 
+  .sidebar {
+    border-bottom: 10px double $brand-primary;
+  }
+}

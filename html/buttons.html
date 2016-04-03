@@ -1,0 +1,61 @@
+{% set page="buttons" %}
+ {% extends "html/_layouts/page.html" %}
+{% block pagetitle %}Buttons{% endblock %}
+{% block content %}
+<h1>Buttons</h1>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Secondary, outline button -->
+<button type="button" class="btn btn-secondary">Secondary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
+<h2>Outline buttons</h2>
+
+<button type="button" class="btn btn-primary-outline">Primary</button>
+<button type="button" class="btn btn-secondary-outline">Secondary</button>
+<button type="button" class="btn btn-success-outline">Success</button>
+<button type="button" class="btn btn-info-outline">Info</button>
+<button type="button" class="btn btn-warning-outline">Warning</button>
+<button type="button" class="btn btn-danger-outline">Danger</button>
+
+<h2>Sizes</h2>
+
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+<h3>Block level buttons</h3>
+
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+
+<h2>States</h2>
+<h3>Active state</h3>
+
+<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg active" role="button">Link</a>
+
+<h3>Disabled state</h3>
+
+<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+
+{% endblock %}

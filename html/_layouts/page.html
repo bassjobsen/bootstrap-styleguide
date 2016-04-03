@@ -1,0 +1,40 @@
+{% if env == 'development' %}
+{% set css_path="css/app.css" %}
+{% set js_path="js/app.js" %}
+{% else %}
+{% set css_path="css/app.min.css" %}
+{% set js_path="js/app.min.js" %}
+{% endif %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Bootstrap 4 Style guide :: {% block pagetitle %}{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{{ css_path }}">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+           
+           {% include "html/_includes/menu.html" %}
+
+            <section class="col-xs-12 col-md-9 layout-column main-content">
+                
+                {% block content %}
+                {% endblock %} 
+                
+            </section>
+       </div>    
+    <footer class="row navbar-fixed-bottom">
+        <div class="col-xs-12 text-xs-center">&copy; 2016, Bass Jobsen <a href="http://bassjobsen.weblogs.fm/">http://bassjobsen.weblogs.fm/</a></div>
+    </footer>    
+    </div>
+    
+    {% include "html/_includes/footerjavascripts.html" %}
+  </body>  
+</html>
