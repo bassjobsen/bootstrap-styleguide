@@ -1,5 +1,8 @@
 {
   "name": "bootstrap-styleguide",
+  "version": "0.0.1",
+  "description": "Style guide for a new Bootstap project. Powered by nunjucks and Sass.",
+  "main": "Gruntfile.js",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "grunt": "~0.4.5",
@@ -18,5 +21,20 @@
   },
   "engines": {
     "node": ">=0.10.1"
-  }
+  },
+  "scripts": {
+    "start": "grunt",
+    "build": "grunt compile-sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bassjobsen/bootstrap-styleguide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bassjobsen/bootstrap-styleguide/issues",
+    "email": "bass@w3masters.nl"
+  },
+  "author": "Bass Jobsen <bass@w3masters.nl> (http://bassjobsen.weblogs.fm)",
+  "license": "MIT",
+  "private": true
 }
