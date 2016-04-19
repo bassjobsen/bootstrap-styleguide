@@ -4,7 +4,7 @@
   "authors": [
      "Bass Jobsen <bass@w3masters.nl> (http://bassjobsen.weblogs.fm)"
   ],
-  "description": "Style guide for a new Bootstap project. Powered by nunjucks and Sass.",
+  "description": "Style guide for a new Bootstrap project. Powered by nunjucks and Sass.",
   "main": "index.html",
   "license": "MIT",
   "homepage": "https://github.com/bassjobsen/bootstrap-styleguide/",
