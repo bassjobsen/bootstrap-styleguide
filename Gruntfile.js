@@ -11,18 +11,23 @@ module.exports = function (grunt) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
   };
 
-
   var config = {
-    bower: { path: 'bower_components/'}
-  }
+    node: { path: 'node_modules/'}
+  };
   
   var mq4HoverShim = require('mq4-hover-shim');
-  //var autoprefixerSettings = require(config.bower.path + 'bootstrap/grunt/autoprefixer-settings.js');
-  //var autoprefixer = require('autoprefixer')(autoprefixerSettings);
-  var autoprefixer = require('autoprefixer');
+  var autoprefixer = require('autoprefixer')([
+    "Chrome >= 45",
+    "Firefox ESR",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30"
+  ]);
   // Project configuration.
-  grunt.initConfig({
-    
+grunt.initConfig({   
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     config: config,
@@ -33,10 +38,9 @@ module.exports = function (grunt) {
     concat: {
       bootstrap: {
         src: [
-          '<%= config.bower.path %>bootstrap/js/src/util.js',
-          '<%= config.bower.path %>bootstrap/js/src/alert.js',
-          '<%= config.bower.path %>bootstrap/js/src/button.js',
-          '<%= config.bower.path %>bootstrap/js/src/collapse.js',
+          '<%= config.node.path %>jquery/dist/jquery.min.js',
+          '<%= config.node.path %>popper.js/dist/umd/popper.min.js',        
+          '<%= config.node.path %>bootstrap/dist/js/bootstrap.min.js',
           'assets/js/fixedsticky.js'
         ],
         dest: '_site/js/app.js'
@@ -44,7 +48,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        includePaths: [config.bower.path + '/bootstrap/scss'],
+        includePaths: [ config.node.path ],
         precision: 6,
         sourceComments: false,
         sourceMap: true,

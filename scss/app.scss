@@ -1,5 +1,5 @@
-@import "../bower_components/bootstrap/scss/bootstrap.scss";
 @import "variables";
+@import "bootstrap/scss/bootstrap.scss";
 @import "utils/fixedsticky";
 
 body, 
@@ -8,9 +8,9 @@ body,
  background-color: $page-background-color;
 }
 .main-content {
-  padding-bottom: $font-size-base * $line-height;
+  padding-bottom: $font-size-base * $line-height-base;
   @include media-breakpoint-down(sm) { 
-    padding-bottom: $font-size-base * $line-height * 2;
+    padding-bottom: $font-size-base * $line-height-base * 2;
   }
 }
 
@@ -21,11 +21,11 @@ body,
   }  
 
   .main-content {
-      border-left: 10px double $brand-primary;
+      border-left: 10px double map-get($theme-colors, "primary");
    }
 }
 @include media-breakpoint-down(sm) { 
   .sidebar {
-    border-bottom: 10px double $brand-primary;
+    border-bottom: 10px double map-get($theme-colors, "primary");
   }
 }
